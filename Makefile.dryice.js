@@ -68,6 +68,8 @@ copy({
                 "ace/undomanager",
                 "ace/theme/textmate",
                 "ace/mode/text",
+                "ace/mode/css",
+                "ace/mode/html",
                 "ace/mode/matching_brace_outdent",
                 "ace/virtual_renderer"
             ]
@@ -164,7 +166,7 @@ copy({
 // create modes
 project.assmeAllFilesLoaded();
 
-["css", "html", "javascript", "php", "python", "xml", "ruby", "java"].forEach(function(mode) {
+["css", "html", "javascript", "php", "python", "xml"].forEach(function(mode) {
     copy({
         source: [
             copy.source.commonjs({
