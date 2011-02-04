@@ -56,6 +56,12 @@ copy({
 var ace = copy.createDataObject();
 copy({
     source: [
+        'build_support/mini_require.js'
+    ],
+    dest: ace
+});
+copy({
+    source: [
         copy.source.commonjs({
             project: project,
             require: [
@@ -98,7 +104,6 @@ copy({
 });
 copy({
     source: [
-        'build_support/mini_require.js',
         'build_support/boot.js'    
     ],
     dest: ace
@@ -166,7 +171,7 @@ copy({
 // create modes
 project.assmeAllFilesLoaded();
 
-["css", "html", "javascript", "php", "python", "xml"].forEach(function(mode) {
+["css", "html", "javascript", "php", "python", "xml", "ruby", "java", "c_cpp"].forEach(function(mode) {
     copy({
         source: [
             copy.source.commonjs({
